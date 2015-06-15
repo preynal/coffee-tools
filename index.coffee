@@ -48,8 +48,12 @@ module.exports.parse = (expression, source = "", callback) ->
 
     exp_tokens = tokenize_expression expression
     # console.log JSON.stringify exp_tokens, null, 4
-
+    skip_tokens = 0
     for i in [0...tokens.length]
+        if skip_tokens > 0
+            skip_tokens--
+            continue
+
         token = tokens[i]
         is_match = true
         captured = {}
@@ -68,12 +72,12 @@ module.exports.parse = (expression, source = "", callback) ->
                 captured_exp = capture_exp exp_token, tokens, i, exp_index
                 if captured_exp
                     captured[captured_exp.key] = captured_exp.value
+                    skip_tokens = captured_exp.skip_tokens or 1
                 else
                     is_match = false
                     break
 
                 if exp_tokens[exp_index + 1].type is "end"
-                    console.log "break end"
                     break
 
             else if exp_token.type is "end"
@@ -82,7 +86,6 @@ module.exports.parse = (expression, source = "", callback) ->
                 is_match = false
                 break
 
-            # console.log exp_token
         if is_match
             matches.push captured
 
