@@ -108,7 +108,3 @@ find = (expression, source = "") ->
             result.push captured
         # console.log token, i
     return result
-
-# find "'b' \"a\""
-source = fs.readFileSync "test.coffee", "utf8"
-console.log find "{route} = require \"{file}\"", source

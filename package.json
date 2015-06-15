@@ -1,15 +1,15 @@
 {
-  "name": "coffee-tools",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "coffee-script": "1.9.3",
-    "webpack": "1.9.10"
-  }
+    "name": "coffee-tools",
+    "version": "0.1.0",
+    "description": "Parser tools for CoffeeScript",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/coffee test/runner.coffee"
+    },
+    "author": "Philippe de Reynal <philippe+npm@dereynal.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "coffee-script": "1.9.3",
+        "webpack": "1.9.10"
+    }
 }
