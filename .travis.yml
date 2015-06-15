@@ -1,7 +1,13 @@
+language: node_js
+node_js:
+    - "0.12"
+    - "0.11"
+    - "iojs"
+before_script: "./node_modules/.bin/webpack webpack.config.js"
 deploy:
-  provider: npm
-  email: philippe@dereynal.com
-  api_key:
-    secure: r7L8QsL+h6Krd56hMYUU2nPXzZmmKLjaESeX9RDSscudMLO3js/BgMrYTp342TTzhrTyxMqbmGukMn5ekQmY3WP7+RgGLkKi8/8uc22HUFc/GhQTsgu1pCVdEeoEvUyTSjkDujofch1G3OuS10Vr8xIsGaP494K4SpE1rUf3pokIC+O+44+IU/bKEQZPQZW8r6rBQbxwaEaQmCVof3e5b+GzdEuPbUt9CrJ0/EScUCVKQHGQFMWiPVQsyelgP6+HkwkxphwXEKTRDxQGgNhQlDHwObSLBaqBOmB6o8jQtXx89NbaA1NNyuG5lUmyk29f4sF4HkEOgns+kr1iaMJqcS7SZqsFkYRP03OCEuwd75BGf8SqiTTTRrnlf2PFOV3xiINQAAOm4xS2RTF2eWlH+hnVJ2HC283vZuVrzHmGnvwHnhQyu85HXOzCmt3Fzhwn9nGBU5Iblt5wbZcb3aPlRYnKIgGFSFEf+EPj5w9NNMt+yEVrW7VSAgNLmUHAypelx6Wwn9MciXg24YRx+wvQGLjsMP0VyCmA8wNCZfQDabokDOpnbV5q5dw+uij0H9cpqFJ2urNWQMMb7NohmPhhSqjcXufrF9MlQXEsYGt61iNSAJHXF5lxRy1S3aMM+xuM4Cn9YyMEc/QW9sbwtXF4nq/6IcUZE6u6aN9mxv4KihA=
-  on:
-    repo: preynal/coffee-tools
+    provider: npm
+    email: philippe@dereynal.com
+    api_key:
+        secure: r7L8QsL+h6Krd56hMYUU2nPXzZmmKLjaESeX9RDSscudMLO3js/BgMrYTp342TTzhrTyxMqbmGukMn5ekQmY3WP7+RgGLkKi8/8uc22HUFc/GhQTsgu1pCVdEeoEvUyTSjkDujofch1G3OuS10Vr8xIsGaP494K4SpE1rUf3pokIC+O+44+IU/bKEQZPQZW8r6rBQbxwaEaQmCVof3e5b+GzdEuPbUt9CrJ0/EScUCVKQHGQFMWiPVQsyelgP6+HkwkxphwXEKTRDxQGgNhQlDHwObSLBaqBOmB6o8jQtXx89NbaA1NNyuG5lUmyk29f4sF4HkEOgns+kr1iaMJqcS7SZqsFkYRP03OCEuwd75BGf8SqiTTTRrnlf2PFOV3xiINQAAOm4xS2RTF2eWlH+hnVJ2HC283vZuVrzHmGnvwHnhQyu85HXOzCmt3Fzhwn9nGBU5Iblt5wbZcb3aPlRYnKIgGFSFEf+EPj5w9NNMt+yEVrW7VSAgNLmUHAypelx6Wwn9MciXg24YRx+wvQGLjsMP0VyCmA8wNCZfQDabokDOpnbV5q5dw+uij0H9cpqFJ2urNWQMMb7NohmPhhSqjcXufrF9MlQXEsYGt61iNSAJHXF5lxRy1S3aMM+xuM4Cn9YyMEc/QW9sbwtXF4nq/6IcUZE6u6aN9mxv4KihA=
+    on:
+        repo: preynal/coffee-tools
