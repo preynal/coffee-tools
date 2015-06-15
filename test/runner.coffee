@@ -1,4 +1,4 @@
-coffee_tools = require "../index"
+coffee_tools = require "../index.js"
 
 cases = [
     "./test"

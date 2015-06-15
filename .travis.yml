@@ -3,7 +3,7 @@ node_js:
     - "0.12"
     - "0.11"
     - "iojs"
-before_script: "./node_modules/.bin/webpack webpack.config.js"
+before_script: "./node_modules/.bin/webpack --config=webpack.config.js"
 deploy:
     provider: npm
     email: philippe@dereynal.com
